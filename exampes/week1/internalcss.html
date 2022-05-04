@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Internal CSS Examples</title>
+  <!--Internal css is right after the title tag and in between the style
+  tags. using the tag for location and {} to style.-->
+  <!-- use # and name of id to target your specific element-->
+  <!-- use . to select a class-->
+  <!-- everything in the style tag is considered an internal style sheet-->
+  <!--Border tag has width with the first part and then color-->
+  <!-- there are different borders, solid, dotted, dashed, hidden, double,
+  groove, ridge, inset and outset-->
+  <!-- padding(inside of border) and margin(outside of border) add space-->
+  <!-- border-radius rounds edges of border-->
+    <style>
+      h1 {
+        color: red;
+      }
+      p {
+        color: blue;
+      }
+      #p1 {
+        font-style: italic;
+      }
+      .boldText {
+        font-weight: bold;
+      }
+      .card {
+        background-color: lightgray;
+        border-radius: 5px;
+        border: 5px  solid gray;
+        /* Below applies to box shadow values */
+        /* offset-x, offset-y, blur-radius, spread-radius, color*/
+        box-shadow:10px 10px 12px 5px rgba(0,0,0,0.5);
+        margin: 24px;
+        padding: 48px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>This is an example for Internal CSS.</h1>
+<!-- id should only be used once and be unique-->
+    <p id="p1">Example p tag 1</p>
+    <p class="boldText"> Example p tag 2</p>
+    <p class="boldText"> Example p tag 3</p>
+
+    <div class="card">
+      This is an example of a card.
+    </div>
+
+    <div class="card">
+      using the same class uses the same style.(card)
+    </div>
+
+    <p class="card">
+      This is an example of overlapping class and styles.
+    </p>
+  </body>
+</html>

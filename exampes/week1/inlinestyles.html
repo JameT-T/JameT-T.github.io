@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Inline Styles Examples</title>
+  </head>
+  <body>
+
+    <h1>This is an Inline Styles examples page.</h1>
+<!--when writing css inline you must use a colon instead of equal sign -->
+<!-- semi colon is like the period of a programming languages-->
+    <p style="font-weight: bold;">
+      This is some example text.
+    </p>
+
+    <p style="font-style: Italic;">
+      This is another example.
+    </p>
+<!-- you can use a thing called "em" (it is the size of the letter m in a font)-->
+<!-- you can use other measurements like points, pixels and em-->
+<!-- percentages are a good way to make sure that font's
+      or items scale with page size-->
+    <p style="font-size: 24px;">
+      BIG text my guy
+    </p>
+
+<!-- you can choose colors by name or hex(must include #) check w3 schools -->
+    <p style="color: red;">
+      Colored text probably
+    </p>
+
+<!-- will color the whole line while using inline( block element takes up
+entire block)-->
+    <p style="background-color: cyan;">
+      Give me some background color man.
+    </p>
+<!-- added an attribute by just using another style after the colon and still
+in the quotes-->
+    <div style="background-color: skyblue; color: red">
+      This is text in a div tag.
+    </div>
+
+<!-- span doesn't color the whole line for background color (basic level inline element)-->
+    <span style="background-color: green;">
+      This is in a span tag.
+    </span>
+
+    <p>
+      This is something <span style="font-size: 36px;">probably</span>?
+    </p>
+
+<!-- block lvl elements respect height and margin top/bottom-->
+    <div style="display: block; height: 100px; margin-top: 50px; background-color: red;">
+      this is an example of a block element
+    </div>
+<!--inline lvl elements DO NOT respect height and margin top/bottom-->
+    <div style="display: inline; height: 100px; margin-top: 50px; background-color: forestgreen;">
+      This is an example of inline level element
+    </div>
+<!-- using inline block doesn't take up a whole line and affects the margin top/bottom
+  and height-->
+    <div style="display: inline-block; height: 100px; margin-top: 50px; background-color: red;">
+      This is an example of inline block lvl elements
+    </div>
+
+  </body>
+</html>
