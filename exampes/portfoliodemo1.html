@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Portfolio Demo 1</title>
+  </head>
+    <style>
+      body {
+        font-family: Verdana;
+        margin: 0px;
+      }
+      .lightblue {
+        color: skyblue;
+      }
+      #header {
+        background-color: navy;
+        color: white;
+        padding 12px 24px
+      }
+      /*to target something in another thing use a space after targeting the outer one first*/
+      /* padding example first is y axis next is x*/
+      #header h1{
+        font-size: 48px;
+        padding: 50px 100px;
+      }
+      #navbar {
+        text-align: right;
+      }
+      #navbar div {
+        display: inline-block;
+        padding: 8px 0px;
+        margin: 8px;
+      }
+      #navbar div.active {
+        border-bottom: 3px solid skblue;
+      }
+      #navbar #cta {
+        background-color: skyblue;
+        border-radius: 4px;
+        color: navy;
+        padding: 8px 16px;
+      }
+      .centered{
+        padding: 100px 250px;
+        text-align: center;
+      }
+      .eyebrow{
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .headingcontent{
+        font-size: 18px;
+        font-weight: bold;
+        margin: 16x 0px;
+      }
+      .button{
+        display: inline-block;
+        font-weight: bold;
+        border: 2px solid black;
+        border-radius: 3px;
+        padding: 8px 12px;
+      }
+    </style>
+  <body>
+    <div id="header">
+      <div id="navbar">
+        <div class="active">work</div>
+        <div>about</div>
+        <div id="cta">contact</div>
+      </div>
+      <h1>I'm <span class="lightblue">James</span> a Visual Designer</h1>
+    </div>
+    <div class="centered">
+      <div class="eyebrow lightblue">About</div>
+      <div class="headingcontent">
+        charlotte based visual designer passionate about creating meaningful
+        experiences that generate value for users and businesses
+      </div>
+      <div class="button">Full bio</div>
+    </div>
+  </body>
+</html>
