@@ -1,0 +1,42 @@
+  h1 {
+    color: red;
+  }
+  p {
+    color: blue;
+  }
+  #p1 {
+    font-style: italic;
+  }
+  .boldText {
+    font-weight: bold;
+  }
+  .card {
+    background-color: lightgray;
+    border-radius: 5px;
+    border: 5px  solid gray;
+    /* Below applies to box shadow values */
+    /* offset-x, offset-y, blur-radius, spread-radius, color*/
+    box-shadow:10px 10px 12px 5px rgba(0,0,0,0.5);
+    margin: 24px;
+    padding: 48px;
+  }
+  .button {
+    background: linear-gradient(to bottom, lightgreen, forestgreen);
+    border: 3px solid darkgreen;
+    border-radius: 6px;
+    /* cursor types and options! */
+    cursor: pointer;
+    display: inline-block;
+    margin: 12px;
+    padding: 12px 24px;
+  }
+
+  /* pseudo-class */
+  /* don't use spaces and makes what happens when you hover the button */
+  .button:hover {
+    opacity: 0.8;
+  }
+/* what a button does when it is clicked. */
+.button:active {
+  background: linear-gradient(to bottom, forestgreen, lightgreen);
+}
