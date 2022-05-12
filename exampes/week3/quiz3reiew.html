@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Quiz 3 Review</title>
+
+    <style>
+      /*below padding examples also apply to margin*/
+
+      .box {
+        background-color: skyblue;
+        border: 1px solid black;
+        display: inline-block;
+        margin: 5px;
+        padding: 60px;
+      }
+
+      .padding1value {
+        /* one value set to all 4 sides*/
+        padding: 24px;
+      }
+
+      .padding2value {
+        /* 1st value sets top and bottom */
+        /* 2nd value sets left and right */
+        padding: 12px 36px
+      }
+
+      .padding3value {
+        /* 1st sets top*/
+        /* 2nd sets left and right*/
+        /*3rd sets the bottom*/
+        padding: 12px 24px 36px;
+      }
+
+      .padding4value {
+        /*1st top*/
+        /*2nd right*/
+        /*3rd bottom*/
+        /*4th left*/
+        /*basically clockwise*/
+        padding: 12px 24px 36px 48px;
+      }
+
+      .br1value {
+        /*1 value to all 4 corners*/
+        border-radius: 12px;
+      }
+
+      .br2value {
+        /*1st sets top-left/bottom-right*/
+        /*2nd sets top-right/bottom-left*/
+        border-radius: 12px 36px;
+      }
+
+      .br3value {
+        /*1st sets top-left */
+        /*2nd sets top-right/bottom-left */
+        /*3rd sets bottom-right */
+        border-radius: 12px 36px 0px;
+      }
+
+      .br4value {
+        /*1st sets top-left*/
+        /*2nd sets top-right*/
+        /3rd sets bottom-right*/
+        /*4th sets bottom-left*/
+        /* clockwise again*/
+        border-radius: 12px 50% 36px 10%;
+      }
+
+      .boxshadowexample {
+        /*offset-x, offset-y, blur-radius, spread, color*/
+        box-shadow: 10px 50px 10px 10px gray;
+      }
+
+      .lineargradientexample1 {
+        /* first value keywords for direction*/
+        /* remaining values are called color stops(colors used in the gradient)*/
+        background: linear-gradient(to right, red, yellow, purple);
+      }
+
+      .lineargradientexample2 {
+        /*first value can be deg (degrees)*/
+        /*  color stops cam use % to choose location*/
+        background: linear-gradient(45deg, red 50%, orange);
+      }
+
+      .radialgradientexample {
+        background: radial-gradient(yellow, orange 20%, black);
+      }
+
+      .transparentbox {
+        /*red channel green channel blue channel and alpha(transparency)*/
+        /*1st amount of red, 2nd amount of green, 3rd amount of blue*/
+        /*all have max of 255 for rgb*/
+        /*4th value is alpha (transparency) from 0-1*/
+        background-color: rgba(255, 255, 0, .5);
+        margin: 36px;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="box padding1value">
+      padding1
+    </div>
+
+    <div class="box padding2value">
+      padding2
+    </div>
+
+    <div class="box padding3value">
+      padding3
+    </div>
+
+    <div class="box padding4value">
+      padding4
+    </div>
+    <br>
+    <div class="box br1value">
+      border radius
+    </div>
+
+    <div class="box br2value">
+      border radius 2
+    </div>
+
+    <div class="box br3value">
+      border radius 3
+    </div>
+
+    <div class="box br4value">
+      border radius 4
+    </div>
+
+    <br>
+
+    <div class="box boxshadowexample">
+      box shadow
+    </div>
+
+    <br>
+
+    <div class="box lineargradientexample1">
+      linear gradient 1
+    </div>
+
+    <div class="box lineargradientexample2">
+      linear gradient 2
+    </div>
+
+    <br>
+
+    <div class="box radialgradientexample">
+      radial gradient
+    </div>
+
+    <br>
+
+    <div class="box">
+      <div class="box transparentbox">
+      see through
+      </div>
+    </div>
+
+  </body>
+</html>
