@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>HTML Tables Example</title>
+  </head>
+
+  <style>
+    /* ugly table css*/
+    #uglytable,
+    #uglytable caption,
+    #uglytable th,
+    #uglytable td {
+      border: 1px solid black;
+      /* gets rid of double borders*/
+      border-collapse: collapse;
+      padding: 12px;
+    }
+
+    #uglytable {
+      margin-bottom: 48px;
+    }
+
+    /*#tablehead {
+      background-color: pink;
+    }
+
+    #tablecell {
+      background-color: skyblue;
+    } */
+
+    #column {
+      background-color: gray;
+    }
+
+
+/* Pretty table css */
+
+  #prettytable {
+    border-collapse: collapse;
+  }
+
+  #prettytable th {
+    padding-bottom: 12px;
+    padding-right: 24px;
+  }
+
+  #prettytable td {
+    padding: 4px 0px;
+  }
+
+  #prettytable tr:nth-child(even) {
+    background-color: lightgrey;
+  }
+
+  #prettytable tr:hover {
+    background-color: lightgreen;
+  }
+  </style>
+  <body>
+    <table id="uglytable">
+      <caption>Ugly table</caption>
+      <!-- easy way to target columns, add span to say how many columns it covers -->
+      <colgroup>
+        <col id="column" span="2">
+        <col>
+        <col>
+        <col>
+      </colgroup>
+      <!-- table head -->
+
+      <thead>
+        <!-- table row -->
+        <tr id="tablehead">
+          <!-- each column name -->
+          <th>first name</th>
+          <th>last name</th>
+          <th>favorite animal</th>
+          <th>least favorite food</th>
+        </tr>
+      </thead>
+
+      <!-- table body -->
+      <tbody>
+        <tr>
+          <!-- table data -->
+          <td id="tablecell">John</td>
+          <td>Smith</td>
+          <td>Dog</td>
+          <td>apples</td>
+        </tr>
+        <!-- new row of data has to be made as follows -->
+        <tr>
+          <!-- table data -->
+          <td>Jane</td>
+          <td>Doe</td>
+          <td>Panther</td>
+          <td>steak</td>
+        </tr>
+        <tr>
+          <!-- table data -->
+          <td>victor</td>
+          <td>van dort</td>
+          <td>butterfly</td>
+          <td>fish</td>
+        </tr>
+        <tr>
+          <!-- table data -->
+          <td>victoria</td>
+          <td>everglot</td>
+          <td>otter</td>
+          <td>soup</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table id="prettytable">
+      <thead>
+        <!-- table row -->
+        <tr>
+          <!-- each column name -->
+          <th>first name</th>
+          <th>last name</th>
+          <th>favorite animal</th>
+          <th>least favorite food</th>
+        </tr>
+      </thead>
+
+      <!-- table body -->
+      <tbody>
+        <tr>
+          <!-- table data -->
+          <td>John</td>
+          <td>Smith</td>
+          <td>Dog</td>
+          <td>apples</td>
+        </tr>
+        <!-- new row of data has to be made as follows -->
+        <tr>
+          <!-- table data -->
+          <td>Jane</td>
+          <td>Doe</td>
+          <td>Panther</td>
+          <td>steak</td>
+        </tr>
+        <tr>
+          <!-- table data -->
+          <td>victor</td>
+          <td>van dort</td>
+          <td>butterfly</td>
+          <td>fish</td>
+        </tr>
+        <tr>
+          <!-- table data -->
+          <td>victoria</td>
+          <td>everglot</td>
+          <td>otter</td>
+          <td>soup</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
