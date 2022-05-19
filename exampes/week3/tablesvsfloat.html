@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>layouts: table vs float</title>
+    <style>
+/* css common to both layouts */
+
+      .header {
+        background-color: lightgreen;
+        padding: 12px 24px;
+      }
+
+      .nav {
+        padding: 12px 24px;
+      }
+
+      .content {
+        padding: 36px;
+      }
+
+      .footer {
+        background-color: green;
+        padding: 12px 24px;
+      }
+
+      img.cat {
+        float: right;
+        margin-left: 12px;
+        width: 300px;
+      }
+
+      img.dog {
+        float: left;
+        margin-right: 12px;
+        width: 300px;
+      }
+
+      .clear {
+        clear: both;
+        margin: 48px;
+      }
+
+/* CSS specific to table layout*/
+
+      #oldtablelayout {
+        border-collapse: collapse;
+        margin-bottom: 48px;
+      }
+
+      #oldtablelayout .nav {
+        background-color: #DDFFDD;
+      }
+
+/*css specific to float layout*/
+
+      #oldfloatlayout .nav {
+        box-sizing: border-box;
+        float: left;
+        width: 20%;
+      }
+
+      #oldfloatlayout .content {
+        box-sizing: border-box;
+        float:left;
+        width: 80%;
+      }
+/* This is the clear fix*/
+      #oldfloatlayout .main:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Table layout below -->
+    <table id="oldtablelayout">
+      <tr>
+        <td class="header" colspan="2"><!-- means this cell spreads 2 columns-->
+          <h1>This is how page layputs used to be done(with tables)</h1>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="nav">
+          <div>
+            <a href="#">Home</a>
+          </div>
+          <div>
+            <a href="#">Gallery</a>
+          </div>
+          <div>
+            <a href="#">About Me</a>
+          </div>
+          <div>
+            <a href="#">Contact</a>
+          </div>
+        </td>
+
+        <td class="content">
+          <img class="cat" src="../../images/cowboybebop.jpg" alt="cowboybebop"
+          />
+
+          <p>
+            Aliqua eu nam nulla cupidatat, ullamco ipsum possumus in te
+            nescius coniunctione, nulla incididunt quo quae legam aut in
+            vidisse comprehenderit, de e noster mentitum ex ab quamquam
+            arbitrantur eu ita legam officia. Legam et litteris sed
+            nostrud noster laboris et aut enim deserunt adipisicing, aut
+            elit incididunt probant. Ab iis comprehenderit ut quamquam
+            ad ullamco, tamen singulis consectetur a pariatur ex
+            legam.Te hic quorum incididunt, ita admodum in ingeniis do
+            quorum senserit eruditionem an eu eram fugiat e appellat,
+            tamen ubi vidisse, iis quem dolore ubi ullamco, magna an
+            consequat aut sunt, quid litteris id instituendarum. In ea
+            firmissimum, ita quid reprehenderit. Esse te do duis
+            incididunt. Consequat enim qui probant familiaritatem, ad
+            dolore minim non deserunt, vidisse quo enim non tamen
+            quibusdam in tractavissent, cupidatat noster export proident
+            nisi, veniam fidelissimae possumus enim mentitum a multos
+            appellat ne multos tamen iis aliquip ad illum.
+          </p>
+
+          <div class="clear"></div>
+
+          <img class="dog" src="../../images/FLCL.jpg" alt="flcl"
+          />
+
+          <p>
+            Admodum est duis, legam quibusdam ab exercitation, mentitum
+            ut dolor, enim officia do iudicem, quae de e tamen officia,
+            arbitror quorum elit admodum duis te magna nostrud
+            reprehenderit id nostrud culpa duis ne minim. Non eram
+            eiusmod concursionibus, commodo fugiat illum se quis.
+            Doctrina summis elit ut eram, fugiat iudicem efflorescere,
+            litteris dolor irure constias minim id litteris exquisitaque
+            a vidisse.An summis iis dolore. Hic an instituendarum, eram
+            philosophari probant fore laboris ab ubi culpa voluptatibus
+            eu ubi nisi appellat. Ad quo domesticarum. Dolore incurreret
+            e fabulas.
+          </p>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="footer" colspan="2">
+          copyright &copy;JameT-T 2022
+        </td>
+      </tr>
+    </table>
+
+<!-- Float layout below -->
+    <div id="oldfloatlayout">
+      <div class="header">
+        <h1>This is how page layouts used to be done (with floats)</h1>
+      </div>
+
+      <div class="main">
+        <div class="nav">
+          <div>
+            <a href="#">Home</a>
+          </div>
+
+          <div>
+            <a href="#">Gallery</a>
+          </div>
+
+          <div>
+            <a href="#">About Me</a>
+          </div>
+
+          <div>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+
+        <div class="content">
+          <img class="cat" src="../../images/cowboybebop.jpg" alt="cowboybebop"
+          />
+
+          <p>
+            Aliqua eu nam nulla cupidatat, ullamco ipsum possumus in te
+            nescius coniunctione, nulla incididunt quo quae legam aut in
+            vidisse comprehenderit, de e noster mentitum ex ab quamquam
+            arbitrantur eu ita legam officia. Legam et litteris sed
+            nostrud noster laboris et aut enim deserunt adipisicing, aut
+            elit incididunt probant. Ab iis comprehenderit ut quamquam
+            ad ullamco, tamen singulis consectetur a pariatur ex
+            legam.Te hic quorum incididunt, ita admodum in ingeniis do
+            quorum senserit eruditionem an eu eram fugiat e appellat,
+            tamen ubi vidisse, iis quem dolore ubi ullamco, magna an
+            consequat aut sunt, quid litteris id instituendarum. In ea
+            firmissimum, ita quid reprehenderit. Esse te do duis
+            incididunt. Consequat enim qui probant familiaritatem, ad
+            dolore minim non deserunt, vidisse quo enim non tamen
+            quibusdam in tractavissent, cupidatat noster export proident
+            nisi, veniam fidelissimae possumus enim mentitum a multos
+            appellat ne multos tamen iis aliquip ad illum.
+          </p>
+
+          <div class="clear"></div>
+
+          <img class="dog" src="../../images/FLCL.jpg" alt="flcl"
+          />
+
+          <p>
+            Admodum est duis, legam quibusdam ab exercitation, mentitum
+            ut dolor, enim officia do iudicem, quae de e tamen officia,
+            arbitror quorum elit admodum duis te magna nostrud
+            reprehenderit id nostrud culpa duis ne minim. Non eram
+            eiusmod concursionibus, commodo fugiat illum se quis.
+            Doctrina summis elit ut eram, fugiat iudicem efflorescere,
+            litteris dolor irure constias minim id litteris exquisitaque
+            a vidisse.An summis iis dolore. Hic an instituendarum, eram
+            philosophari probant fore laboris ab ubi culpa voluptatibus
+            eu ubi nisi appellat. Ad quo domesticarum. Dolore incurreret
+            e fabulas.
+          </p>
+        </div>
+
+        <div class="footer">
+          copyright &copy;JameT-T 2022
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
