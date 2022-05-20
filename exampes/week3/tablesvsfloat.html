@@ -64,12 +64,16 @@
         float:left;
         width: 80%;
       }
-/* This is the clear fix*/
-      #oldfloatlayout .main:after {
-        content: "";
-        display: table;
-        clear: both;
+
+      #oldfloatlayout .main {
+        background: linear-gradient(to right, #DDFFDD 20%, white 20.0001%);
       }
+/* This is the clear fix*/
+
+      #oldfloatlayout .footer{
+        overflow: auto;
+      }
+
     </style>
   </head>
   <body>
@@ -222,7 +226,6 @@
           copyright &copy;JameT-T 2022
         </div>
       </div>
-
     </div>
   </body>
 </html>

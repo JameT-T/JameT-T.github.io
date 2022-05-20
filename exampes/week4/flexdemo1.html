@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Flex Demo 1</title>
+    <style>
+      .flexcontainer {
+        display: flex;
+        background-color: darksalmon;
+        border: 2px solid gray;
+        border-radius: 4px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .box {
+        background-color: lavender;
+        border: 2px solid gray;
+        border-radius: 4px;
+        margin: 10px;
+        padding: 8px 14px;
+        text-align: center;
+      }
+
+/* flex-grow made it fill the space instead of taking up only what they need*/
+/* flex-grow is a flex ITEM property, only for the items not the container*/
+      .flexgrow1 {
+        flex-grow: 1;
+      }
+
+      .flexgrow2 {
+        flex-grow: 2;
+      }
+
+      .flexgrow5 {
+        flex-grow: 5;
+      }
+
+/* similar to width but for flex boxes*/
+      .flexbasis30percent {
+        flex-basis: 30%;
+      }
+/* with pixels it stays the same no matter the size of the page*/
+      .flexbasis200px {
+        flex-basis: 200px;
+      }
+
+/*Order is also a flex item property*/
+/* changes order of items in flex container*/
+      .order1 {
+        order: 1;
+      }
+
+      .order2 {
+        order: 2;
+      }
+
+      .order3 {
+        order: 3;
+      }
+
+      .order4 {
+        order: 4;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2> Flex Grow </h2>
+
+    <p>No Flex Grow</p>
+
+    <div class="flexcontainer">
+      <div class="box">No grow</div>
+
+      <div class="box">No grow</div>
+
+      <div class="box">No grow</div>
+    </div>
+
+    <p>Flex Grow With Value 1</p>
+
+    <div class="flexcontainer">
+      <div class="box flexgrow1">1</div>
+
+      <div class="box flexgrow1">1</div>
+
+      <div class="box flexgrow1">1</div>
+    </div>
+
+    <p>Flex Grow With Value 2</p>
+
+    <div class="flexcontainer">
+      <div class="box flexgrow2">2</div>
+
+      <div class="box flexgrow2">2</div>
+
+      <div class="box flexgrow2">2</div>
+    </div>
+
+    <p>Flex Grow With Mixed Values</p>
+
+    <div class="flexcontainer">
+      <div class="box flexgrow1">1</div>
+
+      <div class="box flexgrow1">1</div>
+
+      <div class="box flexgrow2">2</div>
+    </div>
+
+    <p>Flex Grow With Mixed Values</p>
+
+    <div class="flexcontainer">
+      <div class="box flexgrow1">1</div>
+
+      <div class="box flexgrow1">1</div>
+
+      <div class="box flexgrow5">5</div>
+    </div>
+
+    <h2>Flex Basis</h2>
+
+    <p>Flex Basis With A Percentage</p>
+
+    <div class="flexcontainer">
+      <div class="box flexgrow1">1</div>
+
+      <div class="box flexgrow5">5</div>
+
+      <div class="box flexbasis30percent">30%</div>
+    </div>
+
+    <p>Flex Basis With Pixels</p>
+
+    <div class="flexcontainer">
+      <div class="box flexgrow1">1</div>
+
+      <div class="box flexgrow5">5</div>
+
+      <div class="box flexgbasis200px">200px</div>
+    </div>
+
+    <p>Flex Basis With Both (pixels and percent)</p>
+
+    <div class="flexcontainer">
+      <div class="box flexbasis30percent">30%</div>
+
+      <div class="box flexgrow5">5</div>
+
+      <div class="box flexgbasis200px">200px</div>
+    </div>
+
+    <h2> Order Property</h2>
+
+    <p>No Order</p>
+
+    <div class="flexcontainer">
+      <div class="box">a</div>
+
+      <div class="box">b</div>
+
+      <div class="box">c</div>
+
+      <div class="box">d</div>
+    </div>
+
+    <p>Reverse Order</p>
+
+    <div class="flexcontainer">
+      <div class="box order4">a</div>
+
+      <div class="box order3">b</div>
+
+      <div class="box order2">c</div>
+
+      <div class="box order1">d</div>
+    </div>
+
+  </body>
+</html>

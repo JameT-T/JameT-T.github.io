@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Assignment 11</title>
+
+    <style>
+      .flexcontainer {
+        background-color: lightgreen;
+        border: 5px solid green;
+        border-radius: 5px;
+        display: flex;
+      }
+
+      .box {
+        background-color: cyan;
+        border: 2px solid black;
+        border-radius: 5px;
+        margin: 10px 5px;
+        padding: 10px 15px;
+      }
+
+      .order1 {
+        order: 1;
+      }
+
+      .order2 {
+        order: 2;
+      }
+
+      .order3 {
+        order: 3;
+      }
+
+      .order4 {
+        order: 4;
+      }
+
+      .flexgrow1 {
+        flex-grow: 1;
+      }
+      .flexwrap {
+        flex-wrap: wrap;
+      }
+
+      .flexdirection {
+        flex-direction: column;
+      }
+
+      .alignitems {
+        align-items: flex-end;
+      }
+
+      .justifycontent {
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+    <h2>Part 1</h2>
+
+    <div class="flexcontainer">
+      <div class="box order4">1</div>
+
+      <div class="box order3">2</div>
+
+      <div class="box order2">3</div>
+
+      <div class="box order1">4</div>
+    </div>
+
+    <h2>Part 2</h2>
+
+    <div class="flexcontainer flexwrap">
+      <div class="box flexgrow1">1</div>
+
+      <div class="box flexgrow1">2</div>
+
+      <div class="box flexgrow1">3</div>
+
+      <div class="box flexgrow1">4</div>
+    </div>
+
+    <h2>Part 3</h2>
+
+    <div class="flexcontainer flexdirection alignitems">
+      <div class="box">1</div>
+
+      <div class="box">2</div>
+
+      <div class="box">3</div>
+
+      <div class="box">4</div>
+    </div>
+
+    <h2>Part 4</h2>
+
+    <div class="flexcontainer justifycontent">
+      <div class="box">1</div>
+
+      <div class="box">2</div>
+
+      <div class="box">3</div>
+
+      <div class="box">4</div>
+    </div>
+  <body>
+
+  </body>
+</html>
