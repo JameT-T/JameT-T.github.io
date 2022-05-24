@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Media Queries Example</title>
+
+    <style>
+      header {
+        background-color: skyblue;
+        padding: 12px 48px;
+      }
+
+      #smallscreen,
+      #mediumscreen,
+      #largescreen {
+        padding: 48px;
+      }
+
+      footer {
+        background-color: lavender;
+        padding: 12px 48px;
+      }
+
+/* have to have @media, target screen and then additional
+ parameters by saying "and" with parenthesis*/
+
+      @media screen and (min-width: 800px) {
+        header {
+          font-size: 36px;
+        }
+
+        #largescreen {
+          background-color: red;
+          color: white;
+        }
+
+        #mediumscreen,
+        #smallscreen {
+          background-color: gray;
+          color: gray;
+        }
+      }
+
+      @media screen and (min-width: 480px) and (max-width: 799px) {
+        header {
+          font-size: 24px;
+        }
+
+        #mediumscreen {
+          background-color: darkgreen;
+          color: white;
+        }
+
+        #largescreen,
+        #smallscreen {
+          background-color: gray;
+          color: gray;
+        }
+      }
+
+      @media screen and (max-width: 479px) {
+        header {
+          font-size: 16px;
+        }
+
+        #smallscreen {
+          background-color: blue;
+          color: white;
+        }
+
+        #largescreen,
+        #mediumscreen {
+          background-color: gray;
+          color: gray;
+        }
+
+        footer {
+          display: none;
+        }
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>header</h1>
+    </header>
+
+    <div id="largescreen">
+      <h2>This is greater than 800px</h2>
+    </div>
+
+    <div id="mediumscreen">
+      <h2>This is less than 800px and greater than 480px</h2>
+    </div>
+
+    <div id="smallscreen">
+      <h2>This is less than 480px</h2>
+    </div>
+
+    <footer>
+      <h2>I disappear when the screen gets too small</h2>
+    </footer>
+  </body>
+</html>
