@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Grid Examples</title>
+
+    <style>
+      .mygrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(50px, auto);
+        grid-template-areas:
+        "header header header"
+        "sidenav content content";
+      }
+
+      header {
+        background-color: lightgreen;
+        padding: 36px;
+        grid-area: header;
+      }
+
+      nav {
+        background-color: #DDFFDD;
+        padding: 36px;
+        grid-area: sidenav;
+      }
+
+      main {
+        padding: 36px;
+        grid-area: content;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mygrid">
+      <header>
+        <h1>This is how page layouts can be done with grids and areas</h1>
+      </header>
+
+      <nav>
+        Navigation Goes here
+      </nav>
+
+      <main>
+        <p>
+          Quo velit aliqua dolor quibusdam o an magna ita multos si
+          sint aut pariatur ex magna, quae expetendis o constias.
+          Laborum id illum possumus ab fabulas de malis vidisse, non
+          dolor ingeniis, si export laborum cohaerescant in dolor
+          occaecat tractavissent ab o culpa cernantur reprehenderit,
+          dolore laborum eiusmod, ita tamen ab irure. Se velit
+          ingeniis, ingeniis concursionibus an mentitum. Quae id
+          commodo et magna qui summis non incurreret.Quamquam non
+          summis nam minim aliquip sempiternum, officia legam
+          incididunt ita id de tempor ullamco. E malis concursionibus,
+          duis cupidatat incurreret. Tamen adipisicing nostrud multos
+          nescius aut non minim ne summis, minim pariatur excepteur eu
+          hic se sempiternum. Dolor consequat illustriora.
+        </p>
+
+        <p>
+          Eram voluptate e firmissimum, et de culpa eram multos, ab in
+          sint quae magna, id pariatur imitarentur. Ut irure illum ea
+          doctrina, incurreret veniam occaecat, summis quamquam
+          ullamco quo iis noster dolor e fabulas. Admodum illum nisi
+          hic nulla aut incurreret non legam. Singulis ex nisi, ea
+          admodum iis deserunt.De quibusdam arbitrantur o nostrud hic
+          elit. Occaecat dolor ullamco, possumus transferrem ad
+          offendit, laborum irure elit ingeniis velit de quo pariatur
+          fidelissimae, se dolor an nulla, elit a voluptate, velit
+          relinqueret nostrud elit doctrina, ut amet quibusdam
+          philosophari. A ea despicationes, irure concursionibus
+          pariatur cillum probant, do qui transferrem ex esse
+          cernantur si exercitation.
+        </p>
+      </main>
+    </div>
+  </body>
+</html>

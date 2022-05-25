@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Assignment 13</title>
+
+    <style>
+      body {
+        margin: 0px;
+      }
+      .mygrid {
+        display: grid;
+        font-family: arial, sans-serif;
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: minmax(50px, auto);
+        grid-template-areas:
+          "header header header header header"
+          "sidenav content content content content"
+          "sidenav content content content content"
+          "footer footer footer footer footer";
+      }
+
+      header {
+        background-color: cyan;
+        padding: 36px;
+        grid-area: header;
+      }
+
+      nav {
+        background-color: lightcyan;
+        padding: 36px;
+        grid-area: sidenav;
+      }
+
+      nav ul li {
+        list-style-type: none;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: black;
+      }
+
+      nav ul li a:hover {
+        opacity: 60%;
+        cursor: pointer;
+      }
+
+      main {
+        padding: 36px;
+        grid-area: content;
+      }
+
+      footer {
+        background-color: cyan;
+        grid-area: footer;
+        padding: 24px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="mygrid">
+      <header>
+        <h1>Probably Assignment 13</h1>
+      </header>
+
+      <nav>
+        <ul>
+          <li class="links">
+            <a href="#">Home</a>
+          </li>
+
+          <li class="links">
+            <a href="#">Gallery</a>
+          </li>
+
+          <li class="links">
+            <a href="#">About</a>
+          </li>
+
+          <li class="links">
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <main>
+        <p>
+          Sunt admodum deserunt, constias dolor id fabulas
+          philosophari. Arbitror nam tamen ullamco ex commodo
+          exercitation se litteris. Minim proident vidisse.Mandaremus
+          dolore id vidisse instituendarum do ubi consequat ex aliquip
+          sed si velit firmissimum si velit praesentibus ingeniis amet
+          offendit ex aliqua vidisse se instituendarum, nisi constias
+          si summis velit et ea fore tamen se constias id irure o ita
+          enim expetendis. In anim consequat incurreret ea laboris
+          velit laboris laboris. Occaecat tempor possumus quo
+          incurreret a anim cernantur, occaecat culpa mandaremus a non
+          eram nulla dolor singulis. Nescius concursionibus do
+          mentitum aut quis si qui magna nescius, hic ut arbitrantur a
+          export sed nam magna mandaremus, excepteur labore nostrud
+          occaecat, eu export quem si arbitror, ingeniis magna ubi
+          officia firmissimum, dolor expetendis incididunt.
+        </p>
+
+        <p>
+          Iis cillum quorum ita offendit. Ubi sunt te quae, noster ita
+          ut malis senserit, nulla imitarentur cernantur minim
+          senserit, ea velit magna sed probant, malis cernantur
+          concursionibus a labore mentitum coniunctione, officia si
+          sunt in occaecat ea sunt deserunt. Probant esse nulla
+          ullamco fore hic fore imitarentur offendit veniam fabulas,
+          deserunt se noster qui se nam nisi magna eram, aliquip
+          multos appellat ullamco, ipsum transferrem cernantur ipsum
+          doctrina si iudicem elit ut ullamco relinqueret non ne anim
+          cernantur commodo.Aute aliquip consectetur, non nescius a
+          nescius, o anim offendit firmissimum, de aliqua aliquip
+          quamquam, eu minim incididunt, culpa vidisse nam graviterque
+          ita senserit o incurreret, appellat magna quem et fugiat.
+          Tamen appellat ab incididunt o dolor id arbitror. Ea ut anim
+          admodum te veniam singulis domesticarum de litteris quae in
+          quibusdam efflorescere, anim ad voluptate si quis. Quae ubi
+          eiusmod de multos, deserunt tamen doctrina laboris, eu
+          mentitum iis arbitror se possumus non mentitum.
+        </p>
+      </main>
+
+      <footer>
+        Probably a footer for Assignment 13
+      </footer>
+    </div>
+  </body>
+</html>
