@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Audio Example</title>
+
+    <style>
+      .smallvideo {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- audio tag is audio -->
+    <!-- controls doesn't need anything other than controls -->
+    <!-- add loop attribute to make audio loop in audio tag -->
+    <audio controls>
+      <!-- for different audio types -->
+      <source src="../../audio/lofi.mp3" type="audio/mpeg"/>
+
+      <source src="../../audio/lofi.mp3" type="audio/ogg"/>
+      your browser does not support this audio element.
+    </audio>
+
+    <!-- you can use autoplay, loop and muted as attributes -->
+    <!-- poster attribute adds an initial image for the video instead of blank space -->
+    <video
+      controls
+      poster="../../images/FLCL.jpg"
+      class="smallvideo"
+      >
+      <source src="../../video/asdf.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </body>
+</html>
