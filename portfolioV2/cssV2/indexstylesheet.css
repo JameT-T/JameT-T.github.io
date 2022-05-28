@@ -21,9 +21,16 @@ to fill page */
 
 header {
   background-color: #FFFEF2;
+  display: flex;
+  flex-direction: column;
   grid-area: header;
 }
 
+header img {
+  align-self: center;
+  width: 65%;
+  overflow: hidden;
+}
 /* turned container for nav into flex to make it easier to position */
 .navflex {
   align-items: center;
@@ -31,6 +38,7 @@ header {
   display: flex;
   grid-area: sidenav;
   height: 100vh;
+  overflow: hidden;
 }
 
 .headerposition {
