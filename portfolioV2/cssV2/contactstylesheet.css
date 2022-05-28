@@ -19,14 +19,6 @@ to fill page */
   width: 100vw;
 }
 
-/* turned container for nav into flex to make it easier to position */
-.navflex {
-  align-items: center;
-  background-color: #F8F0C6;
-  display: flex;
-  grid-area: sidenav;
-}
-
 header {
   background-color: #FFFEF2;
   grid-area: header;
@@ -34,6 +26,14 @@ header {
 
 .headerposition {
   margin-left: 24px;
+}
+
+/* turned container for nav into flex to make it easier to position */
+.navflex {
+  align-items: center;
+  background-color: #F8F0C6;
+  display: flex;
+  grid-area: sidenav;
 }
 
 nav ul {
