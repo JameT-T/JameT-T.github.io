@@ -25,6 +25,7 @@ to fill page */
   background-color: #F8F0C6;
   display: flex;
   grid-area: sidenav;
+  height: 100vh;
 }
 
 header {
@@ -74,7 +75,7 @@ main {
 
 main img {
   align-self: center;
-  margin: 0px;
+  margin: -24px 24px 0px 24px;
   width: 65%;
 }
 
