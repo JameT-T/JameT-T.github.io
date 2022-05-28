@@ -1,0 +1,101 @@
+/* overriding defaults */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* changing container into a grid for items and adjusting height& width
+to fill page */
+.grid {
+  display: grid;
+  grid-template-columns: 25% 37.5% 37.5%;
+  grid-auto-rows: minmax(50px, auto);
+  grid-template-areas:
+  "sidenav header header"
+  "sidenav content content"
+  "sidenav footer footer";
+  height: 100vh;
+  width: 100vw;
+}
+
+/* turned container for nav into flex to make it easier to position */
+.navflex {
+  align-items: center;
+  background-color: #F8F0C6;
+  display: flex;
+  grid-area: sidenav;
+}
+
+header {
+  background-color: #FFFEF2;
+  grid-area: header;
+}
+
+.headerposition {
+  margin-left: 24px;
+}
+
+nav ul {
+  padding: 0px;
+}
+nav ul li {
+  list-style-type: none;
+  margin: 8px;
+  font-size: 1em;
+}
+
+nav ul li a {
+  background-color: #F8F0C6;
+  border-radius: 8px;
+  color: black;
+  display: block;
+  padding: 12px 100px 0px 8px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #FFFEF2;
+  cursor: pointer;
+}
+
+nav ul li a:active {
+  color: white;
+}
+
+/* same as with nav */
+main {
+  align-content: center;
+  background-color: #FFFEF2;
+  display: flex;
+  flex-direction: column;
+  grid-area: content;
+}
+
+main img {
+  align-self: center;
+  margin: 0px;
+  width: 65%;
+}
+
+main h1,
+h2 {
+  font-size: 2.8vw;
+  text-align: center;
+}
+
+.icons {
+  margin: 24px;
+  width: 75px;
+}
+
+.text {
+  align-self: center;
+  margin: -50px 24px 0px 24px;
+}
+
+/* just kept in here as a placeholder and in case it is needed */
+footer {
+  background-color: #FFFEF2;
+  grid-area: footer;
+}
