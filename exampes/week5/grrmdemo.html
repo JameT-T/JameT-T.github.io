@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>GRRM</title>
+
+    <style>
+      #gridlayout {
+        display: grid;
+        grid-template-columns: 1fr repeat(3, 333px) 1fr;
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas:
+        /* . will leave an empty cell*/
+        ". header header header ."
+        ". navbar navbar navbar ."
+        ". banner banner banner ."
+        ". cards  cards  cards  ."
+        ". aside  blog   blog   ."
+        ". footer footer footer ."
+        ". bottom bottom bottom .";
+      }
+
+      header,
+      nav,
+      #bannercontainer,
+      #cardscontainer,
+      aside,
+      main,
+      footer,
+      #bottom {
+        border: 3px solid black;
+        height: 100px;
+      }
+
+      header {
+        grid-area: header;
+        text-align: center;
+      }
+
+      header h1 {
+        display: inline-block;
+
+      }
+
+      nav {
+        grid-area: navbar;
+      }
+
+      #bannercontainer {
+        grid-area: banner;
+      }
+
+      #cardscontainer {
+        grid-area: cards;
+      }
+
+      aside {
+        grid-area: aside;
+      }
+
+      main {
+        grid-area: blog;
+      }
+
+      footer {
+        grid-area: footer;
+      }
+
+      #bottom {
+        grid-area: bottom;
+      }
+
+      @media screen and (max-width: 1000px) {
+        #gridlayout {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+          "header"
+          "navbar"
+          "banner"
+          "blog"
+          "cards"
+          "aside"
+          "footer"
+          "bottom";
+        }
+        header {
+          text-align: center;
+        }
+
+        header h1 {
+          display: inline-block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="gridlayout">
+      <header>
+        <img
+          src="../../images/Grrm/shield-spin.jpg"
+        />
+
+        <h1>George R. R. Martin</h1>
+
+        <img
+          src="../../images/Grrm/facebook-overall.jpg"
+        />
+
+        <img
+          src="../../images/Grrm/twitter-overall.jpg"
+        />
+      </header>
+
+      <nav>
+        Navigation
+      </nav>
+
+      <section id="bannercontainer">
+        Banner
+      </section>
+
+      <section id="cardscontainer">
+        Cards
+      </section>
+
+      <aside>
+        Aside
+      </aside>
+
+      <main>
+        Blog Posts
+      </main>
+
+      <footer>
+        footer
+      </footer>
+
+      <div id="bottom">
+        bottom
+      </div>
+    </div>
+  </body>
+</html>
