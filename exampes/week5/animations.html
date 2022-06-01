@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Animation examples</title>
+
+    <style>
+      /* have to @keyframes and name animation before brackets */
+      @keyframes tored {
+
+        /*perentages are equivalent to frames*/
+
+        0% {
+          color: black;
+        }
+
+        25% {
+          color: blue;
+          transform: scale(2);
+        }
+
+        50% {
+          color: red;
+        }
+
+        75% {
+          color: green;
+        }
+
+        100% {
+          color: black;
+        }
+      }
+
+      #animation1 {
+        /*target name of animation, give a duration and how many times to repeat */
+        animation: tored 2s infinite;
+        transform-origin: left;
+      }
+
+      #box {
+        box-sizing: border-box;
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        animation: tocircle 5s infinite;
+        animation-delay: 3s;
+      }
+
+      @keyframes tocircle {
+        /*below is an easy way to give the same keyframe to beginning and end*/
+        0%, 100% {
+          background-color: red;
+          border-radius: 0px;
+        }
+
+        25% {
+          border-radius: 50% 0% 50% 75%;
+        }
+
+        50% {
+          background-color: blue;
+          border-radius: 50%;
+        }
+
+        75% {
+          transform: translateX(200px) rotate(180deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="animation1">This is a basic animation.</h1>
+
+    <div id="box"></div>
+  </body>
+</html>
