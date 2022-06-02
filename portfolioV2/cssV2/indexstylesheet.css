@@ -94,6 +94,7 @@ h2 {
 }
 
 .icons {
+  align-self: center;
   margin: 24px;
   width: 75px;
 }
