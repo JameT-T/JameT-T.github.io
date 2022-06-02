@@ -51,7 +51,7 @@ nav ul {
 nav ul li {
   list-style-type: none;
   margin: 8px;
-  font-size: 1em;
+  font-size: 16px;
 }
 
 nav ul li a {
@@ -89,7 +89,7 @@ main a {
 
 main h1,
 h2 {
-  font-size: 2.8vw;
+  font-size: 24px;
   text-align: center;
 }
 
@@ -107,4 +107,60 @@ h2 {
 footer {
   background-color: #FFFEF2;
   grid-area: footer;
+}
+
+
+@media screen and (max-width: 480px) {
+
+  .grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: minmax(50px, auto);
+    grid-template-areas:
+    "header"
+    "content"
+    "sidenav"
+    "footer";
+  }
+
+  header {
+    align-items: center;
+  }
+
+  header img {
+    width: 200px;
+    overflow: hidden;
+  }
+
+  main h1,
+  h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .navflex {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  nav ul li {
+    font-size: 16px;
+  }
+  nav ul li a {
+    background-color: #F8F0C6;
+    border-radius: 8px;
+    color: black;
+    display: block;
+    padding: 4px 16px 4px 16px;
+    text-decoration: none;
+  }
+
+  .icons {
+    align-self: center;
+  }
+  footer {
+    background-color: #F8F0C6;
+  }
+
 }

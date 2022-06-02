@@ -3,6 +3,10 @@
   <head>
     <title>GRRM</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
+
     <style>
       #gridlayout {
         display: grid;
@@ -28,7 +32,6 @@
       footer,
       #bottom {
         border: 3px solid black;
-        height: 100px;
       }
 
       header {
@@ -38,11 +41,27 @@
 
       header h1 {
         display: inline-block;
+        font-family: 'Montaga', serif;
 
       }
 
       nav {
         grid-area: navbar;
+      }
+
+      nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+        justify-content: space-between;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: black;
+        font-family: 'Montaga', serif;
       }
 
       #bannercontainer {
@@ -89,6 +108,11 @@
         header h1 {
           display: inline-block;
         }
+
+        nav ul {
+          align-items: center;
+          flex-direction: column;
+        }
       }
     </style>
   </head>
@@ -99,7 +123,7 @@
           src="../../images/Grrm/shield-spin.jpg"
         />
 
-        <h1>George R. R. Martin</h1>
+        <h1>GEORGE R. R. MARTIN</h1>
 
         <img
           src="../../images/Grrm/facebook-overall.jpg"
@@ -111,7 +135,21 @@
       </header>
 
       <nav>
-        Navigation
+        <ul>
+          <li><a href="#">Home</a></li>
+
+          <li><a href="#">Not A Blog</a></li>
+
+          <li><a href="#">About George</a></li>
+
+          <li><a href="#">Books</a></li>
+
+          <li><a href="#">For Fans</a></li>
+
+          <li><a href="#">News</a></li>
+
+          <li><a href="#">Merchandise</a></li>
+        </ul>
       </nav>
 
       <section id="bannercontainer">
