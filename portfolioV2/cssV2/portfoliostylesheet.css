@@ -79,10 +79,8 @@ main {
 main img {
   border: 2px solid black;
   border-radius: 8px;
-  flex-basis: 33.33%;
   margin: 16px;
   width: 200px;
-
 }
 /* just kept in here as a placeholder and in case it is needed */
 footer {
