@@ -34,7 +34,7 @@
       main,
       footer,
       #bottom {
-        border: 3px solid black;
+        border: 8px solid grey;
       }
 
       header {
@@ -87,7 +87,10 @@
       }
 
       aside {
+
         grid-area: aside;
+        display: flex;
+        flex-direction: column;
       }
 
       #moreappearancescontainer {
@@ -95,6 +98,7 @@
         background-position: right bottom;
         background-repeat: no-repeat;
         background-color: black;
+        margin: 2px;
         padding: 24px;
       }
 
@@ -126,6 +130,7 @@
         "head head"
         "img descr"
         "footer  footer";
+        margin: 2px;
         padding: 24px;
       }
 
@@ -161,8 +166,42 @@
       #viewpublications  img {
         grid-area: footer;
       }
+
+      #valyriansteel {
+        margin: 2px;
+      }
+
+      #valyriansteel img {
+        width: 100%;
+      }
+
+      #stagecoach {
+        margin: 2px;
+      }
+
+      #stagecoach img {
+        width: 100%;
+      }
       main {
+        background-color: white;
         grid-area: blog;
+      }
+
+      main div {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        margin: 14px;
+      }
+      main div h2 {
+        font-family: "Montaga", serif;
+      }
+      .blogheadings {
+        font-family: "Montaga", serif;
+      }
+      .blogcontent {
+        font-family: verdana, sans-serif;
+        font-size: 14px;
       }
 
       footer {
@@ -173,7 +212,7 @@
         grid-area: bottom;
       }
 
-      @media screen and (max-width: 1000px) {
+      @media screen and (max-width: 480px) {
         #gridlayout {
           grid-template-columns: 1fr;
           grid-template-areas:
@@ -260,8 +299,6 @@
       </section>
 
       <aside>
-        Aside
-
         <div id="moreappearancescontainer">
           <h3>NEXT APPEARANCE</h3>
 
@@ -294,22 +331,93 @@
           </div>
 
           <img src="../../images/Grrm/more-appearances.jpg" alt="more appearances">
-
         </div>
 
         <div id="valyriansteel">
-
+          <img src="../../images/Grrm/valyrian-steel-v3.jpg" alt="valyrian steel">
         </div>
 
         <div id="stagecoach">
-
+          <img src="../../images/Grrm/stagecoach-v2.jpg" alt="stagecoach">
         </div>
-
-
       </aside>
 
       <main>
-        Blog Posts
+        <div>
+          <h2>CURRENT GRRM BLOG POSTS</h2>
+
+          <br>
+
+          <h3 class="blogheadings">Stonemaiden Is Back<h3>
+
+          <div class="blogcontent">
+            <p>
+              There’s a brand new treat for Wild Cards fans over at Tor.com.
+              “Hearts of Stone” is a terrific new novelette from Emma Newman.
+              It marks the return of Stonemaiden, the Cornish ace first introduced
+              in KNAVES OVER QUEENS.   That was… <a href="#">Read more »<a>
+            </p>
+          </div>
+
+          <h3 class="blogheadings">Stonemaiden Is Back<h3>
+
+          <div class="blogcontent">
+            <p>
+              There’s a brand new treat for Wild Cards fans over at Tor.com.
+              “Hearts of Stone” is a terrific new novelette from Emma Newman.
+              It marks the return of Stonemaiden, the Cornish ace first introduced
+              in KNAVES OVER QUEENS.   That was… <a href="#">Read more »<a>
+            </p>
+          </div>
+
+          <h3 class="blogcontent">Stonemaiden Is Back<h3>
+
+          <div class="blogcontent">
+            <p>
+              There’s a brand new treat for Wild Cards fans over at Tor.com.
+              “Hearts of Stone” is a terrific new novelette from Emma Newman.
+              It marks the return of Stonemaiden, the Cornish ace first introduced
+              in KNAVES OVER QUEENS.   That was… <a href="#">Read more »<a>
+            </p>
+          </div>
+
+          <h3 class="blogcontent">Stonemaiden Is Back<h3>
+
+          <div class="blogcontent">
+            <p>
+              There’s a brand new treat for Wild Cards fans over at Tor.com.
+              “Hearts of Stone” is a terrific new novelette from Emma Newman.
+              It marks the return of Stonemaiden, the Cornish ace first introduced
+              in KNAVES OVER QUEENS.   That was… <a href="#">Read more »<a>
+            </p>
+          </div>
+
+          <h3 class="blogcontent">Stonemaiden Is Back<h3>
+
+          <div class="blogcontent">
+            <p>
+              There’s a brand new treat for Wild Cards fans over at Tor.com.
+              “Hearts of Stone” is a terrific new novelette from Emma Newman.
+              It marks the return of Stonemaiden, the Cornish ace first introduced
+              in KNAVES OVER QUEENS.   That was… <a href="#">Read more »<a>
+            </p>
+          </div>
+
+          <h3 class="blogcontent">Stonemaiden Is Back<h3>
+
+          <div class="blogcontent">
+            <p>
+              There’s a brand new treat for Wild Cards fans over at Tor.com.
+              “Hearts of Stone” is a terrific new novelette from Emma Newman.
+              It marks the return of Stonemaiden, the Cornish ace first introduced
+              in KNAVES OVER QUEENS.   That was… <a href="#">Read more »<a>
+            </p>
+          </div>
+
+          <a href="#">
+            <img src="../../images/Grrm/not-a-blog.png" alt="not a blog">
+          </a>
+        </div>
       </main>
 
       <footer>
