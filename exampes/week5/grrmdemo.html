@@ -8,6 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
 
     <style>
+      body {
+        background-image: url("../../images/granite.jpg");
+      }
       #gridlayout {
         display: grid;
         grid-template-columns: 1fr repeat(3, 333px) 1fr;
@@ -68,14 +71,96 @@
         grid-area: banner;
       }
 
+      #bannercontainer img {
+        width: 100%;
+      }
+
       #cardscontainer {
         grid-area: cards;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      #cardscontainer img {
+        flex-grow: 1;
+        margin: 4px;
       }
 
       aside {
         grid-area: aside;
       }
 
+      #moreappearancescontainer {
+        background-image: url(../../images/Grrm/card1bg.jpg);
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-color: black;
+        padding: 24px;
+      }
+
+      #moreappearancescontainer h3 {
+        color: white;
+        font-family: "Montaga", serif;
+      }
+
+      .yellow {
+        color: #DBBF73;
+      }
+
+      .underline {
+        text-decoration: underline;
+      }
+
+      .white {
+        color: white;
+      }
+
+      #viewpublications {
+        background-image: url(../../images/Grrm/releases-bg.jpg);
+        background-position: right bottom;
+        background-repeat: repeat;
+        display: grid;
+        grid-column-gap: 0px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "head head"
+        "img descr"
+        "footer  footer";
+        padding: 24px;
+      }
+
+      #viewpublications h3 {
+        color: white;
+        font-family: "Montaga", serif;
+        grid-area: head;
+      }
+
+      #viewpublications #wildcards {
+        align-self: center;
+        width: 100px;
+        grid-area: img;
+        padding: 10px;
+      }
+
+      #date2 {
+        color: #89cff0;
+        font-weight: bold;
+      }
+
+      #viewpublications div {
+        align-self: left;
+        color: white;
+        font-family: verdana, sans-serif;
+        grid-area: descr;
+        margin-left: 24px;
+      }
+      .grey {
+        color: grey;
+      }
+
+      #viewpublications  img {
+        grid-area: footer;
+      }
       main {
         grid-area: blog;
       }
@@ -112,6 +197,15 @@
         nav ul {
           align-items: center;
           flex-direction: column;
+        }
+
+        #cardscontainer {
+          flex-direction: column;
+        }
+
+        #cardscontainer img {
+          flex-grow: 0;
+          width: 100%;
         }
       }
     </style>
@@ -153,15 +247,65 @@
       </nav>
 
       <section id="bannercontainer">
-        Banner
+        <img src="../../images/Grrm/FandB-banner.jpg" alt="Fire and Blood book">
       </section>
 
       <section id="cardscontainer">
-        Cards
+        <img src="../../images/Grrm/GRRM-SMALL-cocteau3.jpg" alt="cinema">
+
+        <img src="../../images/Grrm/newsletter-home.png" alt="newsletter">
+
+
+        <img src="../../images/Grrm/callout-sample-3.jpg" alt="darksword miniatures">
       </section>
 
       <aside>
         Aside
+
+        <div id="moreappearancescontainer">
+          <h3>NEXT APPEARANCE</h3>
+
+          <p class="yellow"> August 26th - 28th, 2022</p>
+
+          <p>
+            <span class="underline white">Bubonicon 53</span>
+
+            <span class="white"> Guest</span>
+          </p>
+
+          <img src="../../images/Grrm/more-appearances.jpg" alt="more appearances">
+        </div>
+
+        <div id="viewpublications">
+          <h3>NEXT PUBLICATION</h3>
+
+          <img id="wildcards" src="../../images/Grrm/wildcards.jpg">
+
+          <div>
+            <p id="date2"> June 15, 2022</p>
+
+            <p>
+              WILD CARDS Marvel
+              <br>
+              Comic Book 1
+              <br>
+              <span class="grey">(Comic Monthly)</span>
+            </p>
+          </div>
+
+          <img src="../../images/Grrm/more-appearances.jpg" alt="more appearances">
+
+        </div>
+
+        <div id="valyriansteel">
+
+        </div>
+
+        <div id="stagecoach">
+
+        </div>
+
+
       </aside>
 
       <main>
