@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Form Examples part 1</title>
+
+    <style>
+    .textinput label {
+      display: block;
+    }
+
+    .textinput input {
+      margin: 4px 0px 12px 0px;
+      padding: 8px;
+      width: 200px;
+    }
+
+    .textinput input:focus-visible {
+      outline: 0;
+      background-color: skyblue;
+    }
+    #firstnamecontainer input {
+      border: 2px solid red;
+      border-radius: 4px;
+    }
+
+    #lastnamecontainer input {
+
+      border:4px solid blue;
+      border-width: 0 0 4px 0;
+    }
+    textarea {
+      font-family: verdana, sans-serif;
+      margin-top: 4px;
+      padding: 8px;
+      width: 400px;
+    }
+
+    input[type=radio] {
+      margin-left: 16px;
+    }
+
+    #buttoncontainer {
+      margin: 24px 0px;
+    }
+
+    #buttoncontainer input[type=button] {
+      border: 1px solid black;
+      border-radius: 6px;
+      padding: 12px;
+      margin-right: 12px;
+      cursor: pointer;
+    }
+
+    #buttoncontainer input:focus-visible {
+      outline: 0;
+    }
+
+    #buttoncontainer input[type=reset] {
+      border: 1px solid black;
+      border-radius: 6px;
+      margin-right: 12px;
+      padding: 12px;
+      cursor: pointer;
+      background: linear-gradient(to bottom, pink, orange);
+    }
+
+    #buttoncontainer input[type=reset]:active {
+      background: linear-gradient(to top, pink, orange);
+    }
+
+    #buttoncontainer input[type=submit] {
+      border: 0;
+      border-radius: 8px;
+      margin-right: 12px;
+      padding: 12px 48px;
+      cursor: pointer;
+      background: linear-gradient(to bottom, skyblue, teal);
+    }
+
+    #buttoncontainer input[type=submit]:active {
+      background: linear-gradient(to top, skyblue, teal);
+    }
+    </style>
+  </head>
+  <body>
+    <h1> Lets look at forms!!</h1>
+
+    <form action="submission_action.php">
+      <fieldset>
+        <legend>Form Fields</legend>
+        <h2>Text Input</h2>
+
+        <p>What is your name?</p>
+
+        <div id="firstnamecontainer" class="textinput">
+          <label for="firstnameid">First Name:</label>
+
+          <input type="text" id="firstnameid" name="firstname">
+        </div>
+
+        <div id="lastnamecontainer" class="textinput">
+          <label for="lastnameid">Last Name:</label>
+
+          <input type="text" id="lastnameid" name="lastname">
+        </div>
+
+        <h2>Text Area</h2>
+
+  <!-- Text area can also use rows="# of rows" and col="#of columns" -->
+        <label for="codefeelingsid">
+          How do you feel about programming?
+        </label>
+
+        <div>
+          <textarea id="codefeelingsid" name="codefeelings">Default Text
+          </textarea>
+        </div>
+
+        <h2>Radio Input</h2>
+
+        <p>
+          What program are you in?
+        </p>
+
+        <div>
+          <input type="radio" id="raspradio" name="program" value="rasp">
+
+          <label for="raspradio">
+            Recording Arts and Show Production
+          </label>
+        </div>
+
+        <div>
+          <input type="radio" id="dfvpradio" name="program" value="dfvp">
+
+          <label for="dfvp">
+            Digital Filmmaking and Video Production
+          </label>
+        </div>
+
+        <div>
+          <input type="radio" id="gdwdradio" name="program" value="gdwd">
+
+          <label for="gdwd">
+            Graphic Design and Web Development
+          </label>
+        </div>
+
+        <h2>Checkbox Inputs</h2>
+
+        <p>How do you get to class?</p>
+
+      <!-- for has to equal the id of item you want linked -->
+        <div>
+          <input type="checkbox" id="bikecheckbox" name="vehicleoption1" value="bike">
+          <label for="bikecheckbox">Bike</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="buscheckbox" name="vehicleoption2" value="bus">
+          <label for="buscheckbox">Bus</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="carcheckbox" name="vehicleoption3" value="car">
+          <label for="carcheckbox">Car</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="bedcheckbox" name="vehicleoption4" value="bed">
+          <label for="bedcheckbox">I roll out of bed and open my laptop</label>
+        </div>
+
+        <h2>Date Input</h2>
+
+        <div>
+          <label for="dateid">What is your birthday?</label>
+          <input type="date" id="dateid" name="bday">
+        </div>
+
+        <div>
+          <label for="timeid">When do you wake up?</label>
+          <input type="time" id="timeid" name="wakeup">
+        </div>
+
+        <h2>Dropdown Input (Select Input)</h2>
+
+        <div>
+          <label for="foodgroupid">What is your favorite food group?</label>
+          <select id="foodgroupid" name="foodgroup">
+            <option value="">---Select an option---</option>
+            <option value="fruits">Fruits</option>
+            <option value="vegetables">Vegetables</option>
+            <option value="meats">Meats</option>
+            <option value="grains">Grains</option>
+            <option value="dairy">Dairy</option>
+          </select>
+        </div>
+
+        <h2>Buton Inputs</h2>
+
+        <div id="buttoncontainer">
+          <input type="button" value="normal button">
+          <input type="reset" value="reset everything">
+          <input type="submit" value="trigger form action">
+
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
