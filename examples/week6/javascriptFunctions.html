@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Function Examples</title>
+  </head>
+  <body id="background">
+    <input type="button" id="button1" value="button1">
+
+    <script type="text/javascript">
+// Below is how to set up a function//
+      function sayhello() {
+        console.log("Hello");
+      }
+//to use a function you have to name it and execute it like below//
+      sayhello();
+
+//function that accepts one input
+      function addtwo(numbertoadd) {
+        console.log(numbertoadd + 2);
+      }
+
+      addtwo(5);
+      addtwo(1000);
+      addtwo(-40);
+
+      function log(texttolog) {
+        console.log(texttolog);
+      }
+
+      log("Here is some text to log.");
+
+      function addtwoandreturn(number) {
+        return number + 2;
+      }
+
+      addtwoandreturn(5);
+      log(
+        addtwoandreturn(12)
+      );
+
+//saying document ref html and getelementid links by id//
+      let mybutton1 = document.getElementById("button1");
+        mybutton1.style.backgroundColor = "red";
+        mybutton1.style.borderRadius = "50%";
+
+      let body = document.getElementById("background");
+        body.style.backgroundColor = "lavender";
+
+      function getRandomNumberBetween(lowValue, highValue) {
+        let range = highValue - lowValue;
+        let randomValue = Math.random() * range;
+        return Math.floor(lowValue + randomValue);
+      }
+
+      function setRandomBackgroundColor() {
+        let r = getRandomNumberBetween(0, 255);
+        let g = getRandomNumberBetween(0, 255);
+        let b = getRandomNumberBetween(0, 255);
+        body.style.backgroundColor =
+          "rgb(" + r + "," + g + "," + b +")";
+      }
+
+      setRandomBackgroundColor();
+
+      button1.onclick = setRandomBackgroundColor;
+    </script>
+  </body>
+</html>
