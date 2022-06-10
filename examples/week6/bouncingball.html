@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Bouncing Ball</title>
+
+    <style>
+      #ball {
+        background-color: blue;
+        border-radius: 50%;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ball">
+
+    </div>
+
+    <script type="text/javascript">
+      let ball = document.getElementById("ball");
+      let ballX = 0;
+      let ballY = 0;
+      let ballXVel = 2;
+      let ballYVel = 2;
+
+      function updateBall() {
+        ball.style.top = ballY + "px";
+
+        ball.style.left = ballX + "px";
+
+        //ballX = ballX + ballXVel;
+        ballX += ballXVel;
+
+        ballY += ballYVel;
+
+        // && is how you write "and"
+        // || is how you write "or"
+        if (
+            ballX > window.innerWidth - 50
+            || ballX < 0
+        ) {
+            ballXVel *= -1;
+            setRandomBackgroundColor();
+        }
+
+        if (ballY > window.innerHeight - 50
+            || ballY < 0
+        ) {
+          ballYVel *= -1;
+          setRandomBackgroundColor();
+        }
+
+        function getRandomNumberBetween(lowValue, highValue) {
+          let range = highValue - lowValue;
+          let randomValue = Math.random() * range;
+          return Math.floor(lowValue + randomValue);
+        }
+
+        function setRandomBackgroundColor() {
+          let r = getRandomNumberBetween(0, 255);
+          let g = getRandomNumberBetween(0, 255);
+          let b = getRandomNumberBetween(0, 255);
+          let rgb =
+            "rgb(" + r + "," + g + "," + b + ")";
+          console.log(rgb);
+          ball.style.backgroundColor = rgb;
+        }
+
+      setInterval(updateBall, 10);
+    </script>
+  </body>
+</html>
