@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Javascript Slideshow</title>
+
+    <link type="text/css" rel="stylesheet" href="../../css/javascriptslideshow.css">
+
+  </head>
+  <body>
+    <div id="slideshow">
+      <img id="slide1" class="slideshowimage" src="../../images/SunDesign.png" alt="sun">
+
+      <img id="slide2" class="slideshowimage" src="../../images/MoonPhases.png" alt="moon">
+
+      <img id="slide3" class="slideshowimage" src="../../images/FLCL.jpg" alt="flcl">
+
+      <img id="slide4" class="slideshowimage" src="../../images/cowboybebop.jpg" alt="cowboybebop">
+
+    </div>
+
+<!-- onclick is linked to a function in js -->
+    <input
+      type="button"
+      id="previous"
+      value="Previous"
+      onclick="showPreviousSlide()">
+
+    <input
+      type="button"
+      id="next"
+      value="Next"
+      onclick="showNextSlide()">
+
+    <script type="text/javascript" src="../../js/slideshow.js">
+    </script>
+  </body>
+</html>
