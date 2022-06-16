@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Assignment 17</title>
+
+    <script
+			  src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+			  integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+			  crossorigin="anonymous">
+    </script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .popupTrigger {
+        cursor: pointer;
+      }
+
+      .popupTrigger img {
+        width: 50px;
+      }
+
+      #popupContainer {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      #popupimage {
+        width: 400px;
+      }
+
+      #popupContainer.popupOpen {
+        display: flex;
+      }
+
+      #popupBackground {
+        background-color: rgba(100,0,100,.5);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
+
+      #popup {
+        background-color: white;
+        border-radius: 24px;
+        padding: 36px;
+        position: relative;
+        text-align: center;
+        min-width: 400px;
+        z-index: 1;
+      }
+
+      #popup .closePopup {
+        cursor: pointer;
+        margin-top: 40px;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="popupTrigger">
+      <img src="../images/FLCL.jpg" alt="flcl">
+    </div>
+
+    <div> Click the image.</div>
+    <div> Or don't I guess.</div>
+
+    <div id="popupContainer">
+      <div id="popupBackground" class="closePopup"></div>
+
+      <div id="popup">
+        <img id="popupimage" src="../images/FLCL.jpg" alt="flcl">
+
+        <div class="closePopup">Close</div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $(".popupTrigger").click(
+        function() {
+          $("#popupContainer").addClass("popupOpen");
+        }
+      );
+
+      $(".closePopup").click(
+        function() {
+          $("#popupContainer").removeClass("popupOpen");
+        }
+      );
+    </script>
+  </body>
+</html>
