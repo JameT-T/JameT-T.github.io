@@ -21,19 +21,28 @@ to fill page */
 
 header {
   background-color: #FFFEF2;
+  display: flex;
+  flex-direction: column;
   grid-area: header;
 }
 
-.headerposition {
-  margin-left: 24px;
+header img {
+  align-self: center;
+  width: 65%;
+  overflow: hidden;
 }
-
 /* turned container for nav into flex to make it easier to position */
 .navflex {
   align-items: center;
   background-color: #F8F0C6;
   display: flex;
   grid-area: sidenav;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.headerposition {
+  margin-left: 24px;
 }
 
 nav ul {
@@ -42,7 +51,7 @@ nav ul {
 nav ul li {
   list-style-type: none;
   margin: 8px;
-  font-size: 1em;
+  font-size: 16px;
 }
 
 nav ul li a {
@@ -72,31 +81,94 @@ main {
   grid-area: content;
 }
 
-main img {
+main form {
   align-self: center;
-  margin: 0px;
-  width: 65%;
+}
+main form div {
+  margin: 12px;
+}
+main form input {
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-top: 8px;
+
 }
 
-main h1,
-h2 {
-  font-size: 2.8vw;
-  text-align: center;
+main form div label {
+  margin-top: 8px;
+}
+main form textarea {
+  border-radius: 8px;
+  margin-top: 8px;
+  width: 200px;
+  height: 100px;
 }
 
-.icons {
-  margin: 24px;
-  width: 75px;
-  grid-area: icons;
-}
-
-.text {
-  align-self: center;
-  margin: -50px 24px 0px 24px;
+#buttoncontainer input {
+  background-color: #F8F0C6;
+  border: 12px solid #F8F0C6;
+  border-radius: 12px;
+  margin-top: 12px;
 }
 
 /* just kept in here as a placeholder and in case it is needed */
 footer {
   background-color: #FFFEF2;
   grid-area: footer;
+}
+
+
+@media screen and (max-width: 480px) {
+
+  .grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: minmax(50px, auto);
+    grid-template-areas:
+    "header"
+    "content"
+    "sidenav"
+    "footer";
+  }
+
+  header {
+    align-items: center;
+  }
+
+  header img {
+    width: 200px;
+    overflow: hidden;
+  }
+
+  main h1,
+  h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .navflex {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  nav ul li {
+    font-size: 16px;
+  }
+  nav ul li a {
+    background-color: #F8F0C6;
+    border-radius: 8px;
+    color: black;
+    display: block;
+    padding: 4px 16px 4px 16px;
+    text-decoration: none;
+  }
+
+  .icons {
+    align-self: center;
+  }
+  footer {
+    background-color: #F8F0C6;
+  }
+
 }

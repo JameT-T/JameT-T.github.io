@@ -3,7 +3,7 @@
   <head>
     <title>James Banewicz Portfolio Sedate Design Co.</title>
 
-    <link href="../cssV2/indexstylesheet.css" rel="stylesheet">
+    <link href="../cssV2/contactstylesheet.css" rel="stylesheet">
   </head>
   <body>
     <div class="grid">
@@ -31,7 +31,7 @@
         </ul>
       </nav>
 
-      <main id="maincontact">
+      <!-- <main id="maincontact">
         <img
           class="icons"
           src="../../images/icons/phone.png"
@@ -45,6 +45,36 @@
             alt="email image"/>
 
         <h2>########@gmail.com</h2>
+      </main> -->
+
+      <main id="contactform">
+        <form action="submission_action.php">
+
+          <div>
+            <label for="nameid">
+              Name*
+            </label>
+          </div>
+
+          <div>
+            <input type="text" id="nameid" name="name">
+          </div>
+
+
+          <div>
+            <label for="messageid">
+              Message*
+            </label>
+          </div>
+
+          <div>
+            <textarea id="messageid" name="message"></textarea>
+          </div>
+
+          <div id="buttoncontainer">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
       </main>
 
       <footer>
