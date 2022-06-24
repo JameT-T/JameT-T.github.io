@@ -417,6 +417,7 @@ margin-bottom: 36px;
   */
   #footer #footerItems {
     flex-wrap: nowrap;
+    height: auto;
     text-align: center;
   }
 
