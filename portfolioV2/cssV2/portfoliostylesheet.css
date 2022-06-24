@@ -42,7 +42,7 @@ nav ul {
 }
 nav ul li {
   list-style-type: none;
-  margin: 8px;
+  margin: 8px 8px 8px 16px;
   font-size: 1em;
 }
 
@@ -51,7 +51,7 @@ nav ul li a {
   border-radius: 8px;
   color: black;
   display: block;
-  padding: 12px 100px 0px 8px;
+  padding: 12px 100px 12px 8px;
   text-decoration: none;
 }
 
@@ -87,3 +87,30 @@ footer {
   background-color: #FFFEF2;
   grid-area: footer;
 }
+
+@media screen and (max-width: 480px) {
+
+  .grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: minmax(50px, auto);
+    grid-template-areas:
+    "header"
+    "content"
+    "sidenav"
+    "footer";
+  }
+
+  main {
+    justify-content: center;
+    margin-left: 0;
+    margin: 8px;
+  }
+  main img {
+    margin: 0;
+    width: 350px;
+  }
+
+  footer {
+    background-color: #F8F0C6;
+  }

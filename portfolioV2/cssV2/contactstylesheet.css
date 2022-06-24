@@ -50,7 +50,7 @@ nav ul {
 }
 nav ul li {
   list-style-type: none;
-  margin: 8px;
+  margin: 8px 8px 8px 16px;
   font-size: 16px;
 }
 
@@ -59,7 +59,7 @@ nav ul li a {
   border-radius: 8px;
   color: black;
   display: block;
-  padding: 12px 100px 0px 8px;
+  padding: 12px 100px 12px 8px;
   text-decoration: none;
 }
 
